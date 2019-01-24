@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Your Pet</title>
+</head>
+<body>
+
+<!--For the following bonuses, create additional HTML files:-->
+
+<!--1. Create a form for registering a pet for a dog walking site OR ordering a pizza.-->
+<!--Include at least one of the following input types:-->
+<!--Multiple checkbox-->
+<!--Dropdown select-->
+<!--Hidden-->
+<!--Text-->
+<!--Email-->
+<!--Password-->
+<!--Radio-->
+
+    <h1>Welcome!</h1>
+    <h2>Register your pet here.</h2>
+
+    <form method="POST" action="https://request-inspector.glitch.me/">
+
+<!--User's name and user's pet's name-->
+
+        <p>What is your name?</p>
+        <label for="yourName">
+            <input type="text" id="yourName" name="yourName" placeholder="First and last name.">
+        </label>
+        <p>Okay, now tell us your pet's name.</p>
+        <label for="petName">
+            <input type="text" id="petName" name="petsName" placeholder="Your pet's name here.">
+        </label>
+
+<!--Type of pet being registered-->
+
+        <p>What kind of pet are you registering?</p>
+        <select name="petType">
+            <option value="dog">dog</option>
+            <option value="cat">cat</option>
+            <option value="horse">horse</option>
+            <option value="giraffe">giraffe</option>
+            <option value="squirrel">squirrel</option>
+            <option value="octopus">octopus</option>
+            <option value="other">other</option>
+        </select>
+
+<!--Additional contact information-->
+
+        <p>Please give us more information about you so we can contact you.</p>
+        <label for="phoneNumber">Phone Number
+            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="(   )   -    ">
+        </label>
+        <label for="email">Email
+            <input type="text" id="email" name="email" placeholder="Ex: jfk123@gmail.com">
+        </label>
+
+<!--Additional pet information-->
+
+        <p>If there is any special requests regarding your pet (for example: medical needs, diet, etc., please let us know in the box provided.</p>
+        <fieldset>
+            <textarea name="additionalPetInfo" rows="10" cols="80" placeholder="Any additional pet info here."></textarea>
+        </fieldset>
+
+<!--Submit Button-->
+
+        <button>Submit</button>
+
+<!--Newsletter opt-in-->
+
+        <label for="newsletter">
+            <input type="checkbox" id="newsletter" name="newsletter" value="true" checked>
+            Sign me up for email updates.
+        </label>
+
+
+    </form>
+</body>
+</html>
