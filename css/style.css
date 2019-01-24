@@ -1,0 +1,17 @@
+body {
+    background-color: cornsilk;
+    background-image: url("../img/css-background2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+h1,
+h2 {
+    text-decoration: underline;
+    color: darkblue;
+}
+
+h1 {
+    text-align: center;
+}
+
