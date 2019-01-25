@@ -1,17 +1,167 @@
 body {
     background-color: cornsilk;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*navbar elements*/
+
+.nav {
+    background-color: #0d4f17;
+    width: 100vw;
+    position: fixed;
+    margin-left: -50vw;
+    height: 51px;
+    left: 50%;
+    top: 0;
+    border-bottom: 4px solid black;
+    z-index: 11;
+}
+
+.nav ul {
+    text-align: center;
+}
+.nav li {
+    display: inline;
+    text-align: center;
+    margin: 0 30px;
+}
+
+.nav a  {
+    text-decoration: none;
+    color: #fff236;
+    text-transform: uppercase;
+}
+
+.nav a:hover {
+    color: black;
+
+}
+
+#nav-logo {
+    transform: rotate(-2deg);
+    width: 60px;
+    float: left;
+    margin: 10px 15px;
+}
+
+/*Main body elements*/
+
+.main {
+    width: 100vw;
+    height: 100%;
+    margin-left: -50vw;
+    left: 50%;
+    position: relative;
+    margin-top: 55px;
     background-image: url("../img/css-background2.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
+    z-index: 10;
 }
 
-h1,
-h2 {
-    text-decoration: underline;
-    color: darkblue;
+.fancy-header {
+    position: relative;
+    width: 80vw;
+    font-weight: lighter;
+    font-size: 5vw;
+    text-decoration: none;
+    color: white;
+    font-weight: lighter;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: left;
+    left: 40px;
 }
 
-h1 {
-    text-align: center;
+#subheader {
+    position: relative;
+    font-size: 2vw;
+    text-align: left;
+    margin: 0;
+    left: 40px;
+    /*margin-top: -15px;*/
 }
+
+.headers {
+    position: relative;
+    width: 80%;
+    height: 20%;
+    top: 30px;
+    padding: 0;
+    text-align: left;
+}
+
+/* ----- Core Values/ Our Process/ 2020 Vision sections ----- */
+
+.lists {
+    position: relative;
+    width: 50vw;
+    left: 40px;
+    height: 80vw;
+}
+
+.lists h2 {
+    color: #fff236;
+    font-size: 6vw;
+    margin: 0 auto;
+}
+
+.core-values ul,
+.vision-2020 ul {
+    font-size: 1.6vw;
+    text-transform: none;
+    list-style-type: none;
+}
+
+.core-values li,
+.vision-2020 li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.our-process li {
+    font-size: 15px;
+}
+
+.core-values {
+    position: relative;
+    padding: 0;
+    top: 60px;
+    margin-bottom: 70px;
+}
+
+.our-process {
+    position: relative;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.vision-2020 {
+    position: relative;
+    padding: 0;
+    margin-bottom: 10vw;
+}
+
+/* -----  Middle bar style   ----- */
+
+.middle-bar {
+    position: absolute;
+    width: 100vw;
+    height: 10vw;
+    z-index: 11;
+    top: 60vw;
+    background-color: black;
+    transform: rotate(-4deg);
+
+}
+
+
+
+
+
+
+
+
+
 
