@@ -1,5 +1,5 @@
 body {
-    background-color: cornsilk;
+    background-color: white;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -23,7 +23,7 @@ body {
 .nav li {
     display: inline;
     text-align: center;
-    margin: 0 30px;
+    margin: 0 3vw;
 }
 
 .nav a  {
@@ -48,7 +48,7 @@ body {
 
 .main {
     width: 100vw;
-    height: 100%;
+    height: 90vw;
     margin-left: -50vw;
     left: 50%;
     position: relative;
@@ -63,11 +63,11 @@ body {
     position: relative;
     width: 80vw;
     font-weight: lighter;
-    font-size: 5vw;
+    font-size: 3vw;
     text-decoration: none;
     color: white;
     font-weight: lighter;
-    padding: 0;
+    padding: 5px;
     margin: 0;
     text-transform: uppercase;
     text-align: left;
@@ -96,32 +96,35 @@ body {
 
 .lists {
     position: relative;
-    width: 50vw;
+    top: -10vw;
+    width: 70vw;
     left: 40px;
-    height: 80vw;
+    height: 90vw;
+    margin-bottom: 0;
 }
 
 .lists h2 {
     color: #fff236;
-    font-size: 6vw;
+    font-size: 4vw;
     margin: 0 auto;
+    font-style: italic;
 }
 
-.core-values ul,
-.vision-2020 ul {
+.lists ul,
+.lists ol {
+    position: relative;
+    font-size: .5vw;
+    /*text-transform: none;*/
+    /*list-style-type: none;*/
+    left: -20px;
+    color: white;
+}
+
+.lists li {
+    /*display: inline;*/
+    margin: 0 3px;
     font-size: 1.6vw;
-    text-transform: none;
-    list-style-type: none;
-}
-
-.core-values li,
-.vision-2020 li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.our-process li {
-    font-size: 15px;
+    text-transform: uppercase;
 }
 
 .core-values {
@@ -148,15 +151,86 @@ body {
 .middle-bar {
     position: absolute;
     width: 100vw;
-    height: 10vw;
-    z-index: 11;
+    height: 6vw;
+    z-index: 0;
     top: 60vw;
     background-color: black;
-    transform: rotate(-4deg);
+}
+
+/* ----- COMPANY VISION HEADER ----- */
+
+.company-vision-header h2 {
+    position: relative;
+    color: black;
+    text-align: center;
+    font-size: 6vw;
+    text-transform: uppercase;
+    font-weight: lighter;
+    top: -40vw;
+}
+
+/* ----- PICTURE COLLAGE ----- */
+
+.pic-collage {
+    position: relative;
+    width: 100vw;
+    height: 69vw;
+    background-color: black;
+    top: -40vw;
+}
+
+.pic-collage img {
+    width: 50vw;
+    float: left;
+    height: 35vw;
+}
+
+/* ----- OUR PRODUCT ----- */
+
+.our-product-header {
+    position: relative;
+    color: black;
+    text-align: center;
+    font-size: 6vw;
+    text-transform: uppercase;
+    font-weight: lighter;
+    top: -40vw;
+}
+
+/* ---- OUR FEATURES ----- */
+
+.products-table {
+    border: 5px solid black;
+    background-color: #0d4f17;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: lighter;
+    top: -40vw;
+    left: 18%;
+    font-size: 3vw;
+    padding: 0;
+    width: 61vw;
+}
+
+th {
+    color: #fff236;
+    font-weight: lighter;
 
 }
 
+td {
+    color: white;
+    font-weight: lighter;
+}
 
+/* ----- FOOTER ----- */
+
+.footer {
+    position: relative;
+    text-align: center;
+    top: -35vw;
+}
 
 
 
