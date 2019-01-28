@@ -1,0 +1,60 @@
+body {
+    width: 100%;
+    background-color: #DDDDDD;
+}
+
+/* ----- Header section showing
+first sentence and flag image*/
+
+.header-section {
+    width: 50%;
+    margin: 0 auto;
+}
+.sentence {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.flag-image {
+    width: 40%;
+    margin: 0 30%;
+}
+
+
+/* ------ CSS for flag ------- */
+
+.whole-flag {
+    /*position: relative;*/
+    width: 18em;
+    height:12em;
+    margin: 0 auto;
+}
+
+.blue {
+    width: 6em;
+    height: 12em;
+    background-color: rgb(3,38,102);;
+    float: left;
+}
+
+.star {
+    color: white;
+    font-size: 5em;
+    line-height: 2.2em;
+    font-style: normal;
+}
+
+.white {
+    width: 12em;
+    height: 6em;
+    background-color: white;
+    float: left;
+}
+
+.red {
+    width: 12em;
+    height: 6em;
+    background-color: rgb(190,11,49);
+    float:left;
+}
