@@ -1,0 +1,48 @@
+body {
+    /*Variables set*/
+    --bg-info: rgb(206,223,254);
+    --text-info: rgb(83,81,164);
+    --bg-success: rgb(208,243,219);
+    --text-success: rgb(70,142,98);
+    --bg-warning: rgb(252,250,203);
+    --text-warning: rgb(153,135,54);
+    --bg-error: rgb(249,211,215);
+    --text-error: rgb(145,51,73);
+
+    /*rest of body css*/
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+.message {
+    width: auto;
+    border: 1px solid rgb(208,215,225);
+    border-radius: 10px;
+    padding: 8px 20px;
+    margin: 8px 16px;
+    font-weight: bold;
+}
+
+.message-info {
+    background-color: var(--bg-info);
+    color: var(--text-info);
+}
+
+.message-success {
+    background-color: var(--bg-success);
+    color: var(--text-success) ;
+}
+
+.message-warning {
+    background-color: var(--bg-warning);
+    color: var(--text-warning);
+}
+
+.message-error {
+    background-color: var(--bg-error) ;
+    color: var(--text-error);
+}
+
