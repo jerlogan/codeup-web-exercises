@@ -1,0 +1,150 @@
+body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ----- RED COLORED HEADER WITH LOGO AND TEXT ----- */
+
+.logo-header {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    background-color: rgb(205,71,74);
+    margin: 0 auto;
+}
+
+.login-button {
+    position: absolute;
+    right: 10px;
+    background-color: rgb(217,114,116);
+    color: white;
+    margin: 15px;
+    font-size: 1.5em;
+    padding: 6px;
+    z-index: 1000;
+    border-radius: 5px;
+    transition: .5s color;
+}
+
+.login-button:hover {
+    color: rgb(233,213,214);
+}
+
+.getting-git-logo {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    top: 50px;
+}
+
+.getting-git-logo img {
+    width: 100%;
+}
+
+/* ----- HR LINE IN THE MIDDLE ----- */
+
+.logo-hr {
+    position: relative;
+    height: 3px;
+    background-color: white;
+    bottom: -60px;
+    width: 8%;
+    max-width: 60px;
+}
+
+/* ----- "a comprehensive video guide..." text ----- */
+
+.sub-header1 {
+    text-align: center;
+    position: relative;
+    font-size: 1.2em;
+    bottom: -60px;
+    color: rgb(239,198,199);
+}
+
+#git-init-text {
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+}
+
+#git-master-text {
+    color: white;
+    font-style: italic;
+}
+
+/* ----- PURCHASE BUTTON ----- */
+
+.button-div{
+    text-align: center;
+}
+.purchase-button{
+    position: relative;
+    background-color: rgb(205,71,74);
+    font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 35px;
+    padding: 1em;
+    color: white;
+    border: 1px solid white;
+    text-transform: uppercase;
+    width: 13em;
+    bottom: -3.8em;
+    margin: auto;
+    transition: .7s background-color;
+}
+.purchase-button:hover {
+    background-color: white;
+    color: rgb(205,71,74);
+}
+
+/* ----- "Getting started?" text ----- */
+
+.sub-header2 {
+    text-align: center;
+    position: relative;
+    font-size: 1em;
+    bottom: -65px;
+    color: rgb(239, 198, 199);
+}
+
+#getting-started-text {
+    font-weight: bold;
+    color: white;
+}
+
+#course-intro-text {
+    text-decoration: underline;
+    color: white;
+}
+
+/* ----- Course Introduction and videos ----- */
+
+.course-introduction-header {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    top: 580px;
+}
+
+.course-introduction-header h1 {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+.body-hr {
+    position: relative;
+    height: 3px;
+    background-color: rgb(205,71,74);
+    bottom: 170px;
+    width: 8%;
+    max-width: 60px;
+}
+
+
+
+
+
+
+
