@@ -1,0 +1,154 @@
+/* default view - mobile */
+
+.alert-info {
+    /*width: 100%;*/
+    height: 50px;
+    overflow: auto;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(204,255,255);
+    border: 2px solid rgb(204,204,204);
+
+}
+.alert-info a {
+    text-decoration: none;
+    background-color: rgb(204,255,255);
+    text-align: center;
+    color: black;
+    line-height: 46px;
+}
+h1 {
+    text-align: center;
+}
+
+nav {
+    /*width: 100%;*/
+    margin: 0 auto;
+}
+
+.nav-links {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    text-align: center;
+    list-style: none;
+    padding: 15px;
+    background-color: rgb(204,204,204);
+    margin: 5px 0;
+}
+
+.header-img img {
+    width: inherit;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 5px;
+}
+
+footer {
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: x-small;
+}
+
+.flex-center {
+    position: relative;
+    left: %
+    bottom: 10px;
+}
+
+._14 {
+    display: none;
+}
+
+.social-icons {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.social-icons img {
+    width: 20px;
+}
+
+.social-icons li{
+    background-color: white;
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media screen and (min-width: 700px) {
+
+    body {
+        /*position: relative;*/
+        max-width: 890px;
+        /*margin: 0 auto;*/
+        font-family: Arial;
+        font-weight: bold;
+    }
+
+    .hidden-on-desktop {
+        display: none;
+    }
+
+    h1 {
+        text-align: initial;
+        float: left;
+    }
+
+    .nav-links {
+        padding: 0;
+        margin-top: 17px;
+        float: right;
+    }
+
+    .nav-links li {
+        text-align: center;
+        list-style: none;
+        background-color: white;
+        display: inline-block;
+        margin: 5px 0;
+        font-size: small;
+    }
+
+    .main {
+        /*width: 60%;*/
+        margin: 0;
+        float: left;
+        padding: 20px;
+    }
+
+    .sub-section {
+        /*width: 30%;*/
+        float: right;
+        padding: 20px;
+    }
+
+    .social-icons {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .social-icons img {
+        width: 40px;
+    }
+
+    .social-icons li{
+        background-color: white;
+        float: right;
+        margin: 0;
+        padding: 5px;
+        list-style: none;
+    }
+}
