@@ -16,7 +16,7 @@
  * Can you refactor your code to use functions?
  */
 
-Even or odd
+// Even or odd
 
 confirm("Would you like to enter a number?");
 var pickedNumber = prompt('What is your number?');
@@ -208,10 +208,9 @@ function calculateTotal(luckyNumber, totalAmount) {
 var luckyNumber = Math.floor(Math.random() * 6);
 
 var userTotalBill = prompt('What is your total bill?');
-
-
-var google = parseInt((prompt('how much do you make?')).replace('$', ''));
-alert(google);
+var newTotal = calculateTotal(luckyNumber, userTotalBill);
+alert('Your lucky number was ' + luckyNumber + ', your price before the discount was ' +
+    + userTotalBill + ', and your price after the discount is ' + newTotal + '.')
 
 
 
