@@ -7,9 +7,9 @@ alert('Great, ' + userFavColor + ' is my favorite color too!');
 //movie prices logic
 
 var pricePernight = prompt('How much is each movie per night?');
-var littleMermaidNights = prompt('For how many nights are you renting The Little Mermaid?')
-var brotherBearNights = prompt('For how many nights are you renting Brother Bear?')
-var herculesNights = prompt('For how many nights are you renting Hercules?')
+var littleMermaidNights = prompt('For how many nights are you renting The Little Mermaid?');
+var brotherBearNights = prompt('For how many nights are you renting Brother Bear?');
+var herculesNights = prompt('For how many nights are you renting Hercules?');
 var littleMermaid = pricePernight * littleMermaidNights;
 var brotherBear = pricePernight * brotherBearNights;
 var hercules = pricePernight * herculesNights;

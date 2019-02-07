@@ -213,5 +213,12 @@ alert('Your lucky number was ' + luckyNumber + ', your price before the discount
     + userTotalBill + ', and your price after the discount is ' + newTotal + '.')
 
 
+var mermaidDays = prompt("How many days did you rent Little Mermaid?");
+var bearDays = prompt("How many days did you rent That Bear Movie?");
+var herculeDays = prompt("How many days did you rent Hercules?");
+var totalDays = mermaidDays + bearDays + herculeDays;
+var cost = parseInt((prompt("How much did the movies cost per day?")).replace("$", ""));
 
+var movietotal = totalDays * cost;
+alert("You will have to pay $" + movietotal);
 
