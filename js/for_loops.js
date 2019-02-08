@@ -36,14 +36,24 @@
 
     var numToString;
     for (var x = 1; x < 10; x++) {
-        var numToString = x.toString()
+        numToString = x.toString()
         console.log(numToString);
         for (var j = 1; j < 10; j++ ) {
-
+            numToString =+ numToString;
             console.log(j);
         }
 
     }
+
+    // Create a for loop that uses console.log to create the output shown below.
+
+    for (var i = 100; i >= 5; i - 5) {
+        console.log(i);
+        i = i - 5;
+    }
+
+
+
 
 
 
