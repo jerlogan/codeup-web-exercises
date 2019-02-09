@@ -21,26 +21,38 @@
 confirm("Would you like to enter a number?");
 var pickedNumber = prompt('What is your number?');
 
-if (pickedNumber % 2 === 0) {
-    alert('Your number is even.')
+
+function evenOrOdd(pickedNumber) {
+
+    if (pickedNumber % 2 === 0) {
+        alert('Your number is even.')
+    } else {
+        alert('Your number is odd.')
+    }
 }
-else {
-    alert('Your number is odd.')
-}
+
+evenOrOdd(pickedNumber);
 
 //number plus 100
 
-alert('Your number plus 100 is ' + (parseInt(pickedNumber) + 100) + '.');
+function  numberPlusHundred(pickedNumber) {
 
-//if number is negative or positive
+    alert('Your number plus 100 is ' + (parseInt(pickedNumber) + 100) + '.');
 
-if (pickedNumber < 0) {
-    alert('Your number is negative.');
+    //if number is negative or positive
+
+    if (pickedNumber < 0) {
+        alert('Your number is negative.');
+    } else {
+        alert('Your number is positive.');
+    }
 }
 
-else {
-    alert('Your number is positive.');
-}
+numberPlusHundred(pickedNumber);
+
+
+
+
 
 /* ########################################################################## */
 
