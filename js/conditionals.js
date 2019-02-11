@@ -122,11 +122,11 @@ console.log(analyzeColor('green'));
 
 
 
-// Don't change the next two lines!
-// These lines create two variables for you:
-// - `colors`: a list of the colors of the rainbow
-// - `randomColor`: contains a single random color value from the list (this
-//                  will contain a different color everytime the page loads)
+Don't change the next two lines!
+These lines create two variables for you:
+- `colors`: a list of the colors of the rainbow
+- `randomColor`: contains a single random color value from the list (this
+                 will contain a different color everytime the page loads)
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
@@ -135,14 +135,66 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message everytime you refresh the page
  */
 
-console.log(analyzeColor(randomColor));
+function randomColorFunction(randomColor) {
+    if (randomColor === 'red') {
+        return ('Your color is red.')
+    }
+    else if (randomColor === 'orange') {
+        return ('Your color is orange.')
+    }
+    else if (randomColor === 'yellow') {
+        return ('Your color is yellow.')
+    }
+    else if (randomColor === 'green') {
+        return ('Your color is green.')
+    }
+    else if (randomColor === 'blue') {
+        return ('Your color is blue.')
+    }
+    else if (randomColor === 'indigo') {
+        return ('Your color is indigo.')
+    }
+    else if (randomColor === 'violet') {
+        return ('Your color is violet.')
+    }
+}
+
+
+console.log(randomColorFunction(randomColor));
 
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
 
-//see line 86
+function randomColorFunction(randomColor) {
+    switch (randomColor) {
+        case 'red':
+            return ('Your color is red.');
+            break;
+        case 'orange':
+            return ('Your color is orange.');
+            break;
+        case 'yellow':
+            return ('Your color is yellow.');
+            break;
+        case 'green':
+            return ('Your color is green.');
+            break;
+        case 'blue':
+            return ('Your color is blue.');
+            break;
+        case 'indigo':
+            return ('Your color is indigo.');
+            break;
+        case 'violet':
+            return ('Your color is violet.');
+            break;
+    }
+}
+
+    console.log(randomColorFunction(randomColor));
+
 
 
 /**
@@ -233,4 +285,23 @@ var cost = parseInt((prompt("How much did the movies cost per day?")).replace("$
 
 var movietotal = totalDays * cost;
 alert("You will have to pay $" + movietotal);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
