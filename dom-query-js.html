@@ -7,6 +7,12 @@
 <body>
 
 <h1 id="main-header">Hello World!</h1>
+<button id="change-mainHeader">Change Header to something else!</button>
+<button id="subheader-color">Change "Hello Again" to be blue!</button>
+<button id="first-li-color">Change the first list item to blue!</button>
+<button id="change-subParagraph">Mission Accomplished!</button>
+
+
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -33,14 +39,19 @@
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
 
-        mainHeader.innerHTML = 'Javascript is Cool!';
+
+        document.getElementById('change-mainHeader').addEventListener('click', function() {
+            mainHeader.innerHTML = 'Javascript is Cool!';
+        });
 
         // TODO: Uncomment the next line and get the sub header element by id
          var subHeader = document.getElementById('sub-header');
 
         // TODO: Set the text color of subHeader to blue
 
-        subHeader.style.color = 'blue';
+        document.getElementById('subheader-color').addEventListener('click', function() {
+            subHeader.style.color = 'blue';
+        });
 
         // TODO: Uncomment the next line and get all list items
         var listItems = document.querySelectorAll('li');
@@ -53,16 +64,20 @@
 
         // TODO: Set text color of li with dbid = 1 to blue
 
-        listItems[0].style.color = 'blue';
+        document.getElementById('first-li-color').addEventListener('click', function() {
+            listItems[0].style.color = 'blue';
+        });
+
+
 
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
          var subParagraphs = document.querySelectorAll('.sub-paragraph')
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-
-        subParagraphs[0].innerHTML = 'Mission Accomplished!';
-
+        document.getElementById('change-subParagraph').addEventListener('click', function() {
+            subParagraphs[0].innerHTML = 'Mission Accomplished!';
+        });
     })();
 </script>
 </body>
