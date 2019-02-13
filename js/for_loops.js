@@ -8,13 +8,14 @@
 
     function showMultiplicationTable(num) {
 
+        var newNum;
         for (var i = 1; i <= 10; i++) {
-            var newNum = num * i;
+            newNum = num * i;
             console.log(num + ' x ' + i + ' = ' + newNum);
         }
     }
 
-        console.log(showMultiplicationTable(5));
+        showMultiplicationTable(5);
 
     /* Use a for loop and the code from the previous lessons to generate
     10 random numbers between 20 and 200 and output to the console whether
