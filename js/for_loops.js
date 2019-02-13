@@ -34,16 +34,12 @@
     /* Create a for loop that uses console.log to create
     the output shown below. */
 
-    var numToString;
-    for (var x = 1; x < 10; x++) {
-        numToString = x.toString()
-        console.log(numToString);
-        for (var j = 1; j < 10; j++ ) {
-            numToString =+ numToString;
-            console.log(j);
-        }
 
+    for(i = 1; i < 10; i++) {
+        console.log(String(i).repeat(i))
     }
+
+
 
     // Create a for loop that uses console.log to create the output shown below.
 
@@ -51,18 +47,6 @@
         console.log(i);
         i = i - 5;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 })();
 

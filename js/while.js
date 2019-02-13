@@ -24,12 +24,17 @@ numbers. */
 
 var conesLeftToSell = Math.floor(Math.random() * 50) + 50;
 var conesBought;
+var lastConesRemaining = conesLeftToSell - conesLeftToSell;
 
 do {
     //generates random number between 1 and 5
     conesBought = Math.floor(Math.random() * 5) + 1;
     conesLeftToSell = conesLeftToSell - conesBought;
     console.log(conesBought + ' cone(s) have just been sold...there are '
-        + conesLeftToSell + ' cone(s) left.');
-} while (conesLeftToSell - conesBought > 0);
+            + conesLeftToSell + ' cone(s) left.');
+} while (conesLeftToSell >= 5);
+console.log((conesLeftToSell) + ' cone(s) have just been sold...there are '
+    + lastConesRemaining  + ' cone(s) left.');
+
+
 
