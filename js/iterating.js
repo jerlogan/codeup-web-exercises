@@ -63,8 +63,8 @@
 
 
 
-    function first() {
-        return names[0];
+    function first(array) {
+        return array[0];
     }
 
     function second() {
@@ -75,7 +75,7 @@
         return names[names.length - 1];
     }
 
-    console.log(first());
+    console.log(first(names));
     console.log(second());
     console.log(last());
 
