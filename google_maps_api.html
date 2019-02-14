@@ -16,29 +16,58 @@
             height: 100%;
             margin: 0 auto;
             padding: 0;
+            background-color: #0d4f17;
+        }
+        img {
+            width: 20%;
+            height: 20%;
         }
     </style>
 </head>
 <body>
 <div id="map"></div>
+<img id="whataburger-img" alt="Whataburger" src="img/Whataburger_logo.svg.png">
+<img id="roadhouse-img" alt="Texas Roadhouse" src="img/texas-roadhouse.png">
+<img id="olive-garden-img" alt="Olive Garden" src="img/olive-garden.png">
 <script>
+
+    "use strict";
+
 
     function initMap() {
 
-        var allThreeRestaurantsArray = [];
+        //Declare all three arrays
 
-        var LatLong = {lat: 29.3927491, lng: -98.486118};
+        var WhataburgerImage =document.getElementById('whataburger-img');
+        var RoadhouseImage =document.getElementById('roadhouse-img');
+        var OliveGardenImage =document.getElementById('olive-garden-img');
+
+        var allThreeRestaurantsArray = [
+            ['Whataburger', 29.3927491, -98.486118, 'img/Whataburger_logo.svg.png'],
+            ['Texas Roadhouse', 29.4394098, -98.712398, 'img/texas-roadhouse.png'],
+            ['Olive Garden', 29.4392632, -98.6904258, 'img/olive-garden.png']
+        ];
+
+        //establish overall map starting location and zoom
 
         var map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 29.3927491, lng: -98.486118},
-            zoom: 15,
+            zoom: 10
         });
 
-        var marker = new google.maps.Marker({
-            position: LatLong,
-            animation: google.maps.Animation.DROP,
-            map: map
-        });
+        //Run a loop on each restaurant to determine marker locations
+
+        var marker;
+
+        for(var i = 0; i < allThreeRestaurantsArray.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(
+                    allThreeRestaurantsArray[i][1], allThreeRestaurantsArray[i][2]),
+                animation: google.maps.Animation.DROP,
+                map: map,
+                icon: allThreeRestaurantsArray[i][3]
+            })
+        }
 
         //add infoWindow on click of marker
 

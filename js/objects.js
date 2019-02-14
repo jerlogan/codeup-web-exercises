@@ -78,32 +78,43 @@
     var books = [
         {
             title: 'Goosebumps',
-            firstName: 'R.L.',
-            lastName: 'Stine'
+            author: {
+                firstName: 'R.L.',
+                lastName: 'Stine'
+            }
+
 
         },
         {
             title: 'Harry Potter',
-            firstName: 'JK',
-            lastName: 'Rowling'
+            author: {
+                firstName: 'JK',
+                lastName: 'Rowling'
+            }
 
         },
         {
             title: 'The BFG',
-            firstName: 'Roald',
-            lastName: 'Dahl'
+            author: {
+                firstName: 'Roald',
+                lastName: 'Dahl'
+            }
 
         },
         {
             title: 'Holes',
-            firstName: 'Louis',
-            lastName: 'Sachar'
+            author: {
+                firstName: 'Louis',
+                lastName: 'Sachar'
+            }
 
         },
         {
             title: 'Needful Things',
-            firstName: 'Stephen',
-            lastName: 'King'
+            author: {
+                firstName: 'Stephen',
+                lastName: 'King'
+            }
 
         }
     ];
@@ -136,7 +147,7 @@
     for (var j = 0; j < books.length; j++) {
         console.log('Book #' + (j + 1));
         console.log('Title: ' + books[j].title);
-        console.log('Author: ' + books[j].firstName + ' ' + books[j].lastName);
+        console.log('Author: ' + books[j].author.firstName + ' ' + books[j].author.lastName);
     }
 
     /**
