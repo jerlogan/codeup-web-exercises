@@ -116,19 +116,27 @@
             map: map
         });
 
-        var infowWindow = new google.maps.InfoWindow ({
-            content:
-                '<h4>The happiest place on Earth</h4>' +
-                '<p>Best things:</p>' +
-                '<ul>' +
-                '<li>Fries</li>' +
-                '<li>Spicy Ketchup</li>' +
-                '<li>Patty Melt</li>' +
-                '</ul>'
-        });
+        //add infoWindow on click of marker
 
-        infowWindow.open(map, marker);
+        function addInfoWindow(marker, message) {
 
+            var infoWindow = new google.maps.InfoWindow({
+                content:
+                    '<h4>The happiest place on Earth</h4>' +
+                    '<p>Best things:</p>' +
+                    '<ul>' +
+                    '<li>Fries</li>' +
+                    '<li>Spicy Ketchup</li>' +
+                    '<li>Patty Melt</li>' +
+                    '</ul>'
+            });
+
+            google.maps.event.addEventListener(marker, 'click', function () {
+                infoWindow.open(map, this);
+            });
+        }
+
+        addInfoWindow(marker, message);
     }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUOoMBx9oORacmqRR3Gh89_5Q0rKyOLnc&callback=initMap"
