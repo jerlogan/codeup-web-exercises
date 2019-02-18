@@ -8,27 +8,31 @@
         /* Always set the map height explicitly to define the size of the div
          * element that contains the map. */
         #map {
-            height: 50%;
+            width: 700px;
+            height: 550px;
+            margin: 60px auto;
+            box-shadow: 10px 10px 50px black;
+            border: 5px solid black;
         }
         /* Optional: Makes the sample page fill the window. */
-        html, body {
+        html {
+            background-image: url("img/restaraunt-bg.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+        }
+
+        body {
             width: 90%;
             height: 100%;
             margin: 0 auto;
             padding: 0;
-            background-color: #0d4f17;
-        }
-        img {
-            width: 20%;
-            height: 20%;
+
         }
     </style>
 </head>
 <body>
 <div id="map"></div>
-<img id="whataburger-img" alt="Whataburger" src="img/Whataburger_logo.svg.png">
-<img id="roadhouse-img" alt="Texas Roadhouse" src="img/texas-roadhouse.png">
-<img id="olive-garden-img" alt="Olive Garden" src="img/olive-garden.png">
 <script>
 
     "use strict";
@@ -38,54 +42,70 @@
 
         //Declare all three arrays
 
-        var WhataburgerImage =document.getElementById('whataburger-img');
-        var RoadhouseImage =document.getElementById('roadhouse-img');
-        var OliveGardenImage =document.getElementById('olive-garden-img');
-
         var allThreeRestaurantsArray = [
-            ['Whataburger', 29.3927491, -98.486118, 'img/Whataburger_logo.svg.png'],
-            ['Texas Roadhouse', 29.4394098, -98.712398, 'img/texas-roadhouse.png'],
-            ['Olive Garden', 29.4392632, -98.6904258, 'img/olive-garden.png']
+            ['Whataburger', 29.3927491, -98.486118, 'img/rsz_logo-whataburger.png'],
+            ['Texas Roadhouse', 29.498785,  -98.701341, 'img/rsz_texas-roadhouse.png'],
+            ['Olive Garden', 29.351347, -98.534815, 'img/olive-garden.png']
         ];
+
+        //set window content of each marker
+
+        var infoWindowContent = [
+            [
+                '<h1>Whataburger</h1>' +
+                '<h3>Best things:</h3>' +
+                '<ul>' +
+                '<li>Patty Melt</li>' +
+                '<li>Spicy Ketchup</li>' +
+                '<li>Always Open</li>' +
+                '</ul>'
+            ],
+            [
+                '<h1>Texas Roadhouse</h1>' +
+                '<h3>Best things:</h3>' +
+                '<ul>' +
+                '<li>ROLLS</li>' +
+                '</ul>'
+            ],
+            [
+                '<h1>Olive Garden</h1>' +
+                '<h3>Best things:</h3>' +
+                '<ul>' +
+                '<li>Unlimited salad</li>' +
+                '</ul>'
+            ]
+        ];
+
+        var infoWindow = new google.maps.InfoWindow(), marker, i;
 
         //establish overall map starting location and zoom
 
         var map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 29.3927491, lng: -98.486118},
-            zoom: 10
+            center: {lat: 29.4427491, lng: -98.586118},
+            zoom: 11
         });
 
         //Run a loop on each restaurant to determine marker locations
 
-        var marker;
 
-        for(var i = 0; i < allThreeRestaurantsArray.length; i++) {
+        for(i = 0; i < allThreeRestaurantsArray.length; i++) {
             marker = new google.maps.Marker({
                 position: new google.maps.LatLng(
                     allThreeRestaurantsArray[i][1], allThreeRestaurantsArray[i][2]),
                 animation: google.maps.Animation.DROP,
                 map: map,
                 icon: allThreeRestaurantsArray[i][3]
-            })
+            });
+
+            //Event Listener for markers
+
+            google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                return function() {
+                    infoWindow.setContent(infoWindowContent[i][0]);
+                    infoWindow.open(map, marker);
+                }
+            })(marker, i));
         }
-
-        //add infoWindow on click of marker
-
-         var infowindow = new google.maps.InfoWindow({
-             content:
-                '<h4>The happiest place on Earth</h4>' +
-                '<p>Best things:</p>' +
-                '<ul>' +
-                '<li>Fries</li>' +
-                '<li>Spicy Ketchup</li>' +
-                '<li>Patty Melt</li>' +
-                '</ul>'
-            });
-
-            google.maps.event.addListener(marker, 'click', function () {
-                infowindow.open(map, marker);
-            });
-
     }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUOoMBx9oORacmqRR3Gh89_5Q0rKyOLnc&callback=initMap"
