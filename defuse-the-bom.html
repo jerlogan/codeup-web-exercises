@@ -21,11 +21,10 @@
         var updateTimer = setInterval(function(){
             if (detonationTimer === 0) {
                 alert('EXTERMINATE!');
-                document.body.innerHTML = '<h1>You died :(</h1>';
+                document.body.innerHTML = "<h1>You died :(</h1><button onClick='window.location.reload()'>Try Again</button>";
             } else if (detonationTimer > 0) {
                 document.getElementById('timer').innerHTML = detonationTimer;
             }
-
             detonationTimer--;
         }, 1000);
 
@@ -35,7 +34,7 @@
         // cancel the interval/timeout for updateTimer()
         function defuseTheBOM() {
             clearInterval(updateTimer);
-            document.body.innerHTML = '<h1>Whew! That was close!</h1>'
+            document.body.innerHTML = "<h1>Whew! That was close!</h1><button onClick='window.location.reload()'>Try Again</button>"
         }
 
         // Don't modify anything below this line!
