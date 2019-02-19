@@ -19,22 +19,55 @@
 
 
    $(document).ready(function(){
-       var userKeys = [];
-       var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]; //these are the key codes for each correct konami input
+       var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
+           pressedKey,
+           index = 0,
+           started = false;
 
        //Below is the code that detects what key is being pressed.
 
-       $(document).keyup(function(event){
-           userKeys.push(event.keyCode);
-           console.log(userKeys);
+       $(document).keyup(function(e){
+           console.log(e.keyCode);
 
+           //Here we are creating a reset function that is triggered when the array needs to be reset.
 
-       //conditionals to check whether or not the key is the right key. If not then the array gets reset.
+           function reset() {
+               index = 0;
+               started = false;
+           }
 
-           if (userKeys === konami) {
-                alert('yes');
-           } else {
-              console.log('no match');
+           //Below is the function that initiates when all 10 keys have been pressed in the right order.
+
+           function konamiComplete() {
+               $('body').css('background-color', 'yellow');
+               $('h1').html('Konami Complete!').css('color', 'black');
+           }
+
+           //Next, we are going to declare a variable for the user's inputted number.
+
+            pressedKey = e.keyCode;
+
+           //conditionals to check whether or not the first key is the right key. If not then the array gets reset.
+
+           if (pressedKey === 38) {
+                started = true;
+           }
+
+           //Once the first key is pressed, we are good to continue with the array conditionals.
+
+           if(started){
+               if (konami[index] === pressedKey) {
+                   index++;
+                   if (index === 10) {
+                       konamiComplete();
+                       console.log('got it!');
+                   }
+               } else {
+                   reset();
+                   console.log('Your code has been reset. Try again.');
+               }
+           } else if (!started) {
+               reset();
            }
        });
    });
