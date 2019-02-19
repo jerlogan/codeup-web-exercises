@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1 class="h1">Konami Code</h1>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    "use strict";
+
+
+
+
+   $(document).ready(function(){
+       var userKeys = [];
+       var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]; //these are the key codes for each correct konami input
+
+       //Below is the code that detects what key is being pressed.
+
+       $(document).keyup(function(event){
+           userKeys.push(event.keyCode);
+           console.log(userKeys);
+
+
+       //conditionals to check whether or not the key is the right key. If not then the array gets reset.
+
+           if (userKeys === konami) {
+                alert('yes');
+           } else {
+              console.log('no match');
+           }
+       });
+   });
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
