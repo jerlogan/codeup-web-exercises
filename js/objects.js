@@ -56,11 +56,27 @@
         {name: 'George', amount: 320}
     ];
 
-    for (var i = 0; i < shoppers.length; i++) {
-        if (shoppers[i].amount > 200) {
-            console.log(shoppers[i].name);
+    shoppers.forEach(function(shopper){
+        var output = '';
+        var discount = 0;
+        if (shopper.amount > 200) {
+            discount = shopper.amount * 0.12;
+            output += shopper.name;
+            output += ' original bill price: '
+            output += shopper.amount;
+            output += ' discount: ';
+            output += discount;
+            output += ' needs to pay: ';
+            output += shopper.amount - discount;
+            console.log(output);
+        } else {
+            output += shopper.name;
+            output += ' needs to pay: ';
+            output += shopper.amount - discount;
+            console.log(output);
+
         }
-    }
+    });
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
