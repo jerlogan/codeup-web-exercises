@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Mapbox Example</title>
+
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
 </head>
 <body>
+
+<div id='map' style='width: 100%; height: 300px;'></div>
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script>
+    mapboxgl.accessToken = secretKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/satellite-v9',
+        center: [-77.050144, 38.889302],
+        zoom: 11
+    });
+
+    var marker = mapboxgl.Marker();
+    marker.setLngLat([-77.050144, 38.889302]);
+    marker.addTo(map);
+
+    var popup = new mapboxgl.Popup();
+    popup.setText('Lincoln Memorial');
+
+    marker.setPopup(popup);
+
+</script>
+
 
 </body>
 </html>
