@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+
+
+<script>
+    "use strict";
+
+    // Write a function, filterNumbers() that takes in an array of mixed data types and returns an array of only the numbers type in ascending order.
+    //
+    //     Example input: ["fred", true, 5, 3]
+    // Example output: [3, 5]
+
+    function filterNumbers(array) {
+        var output = [];
+        for (var i = 0; i < array.length; i++) {
+            if (typeof (array[i]) === 'number') {
+                output.push(array[i]);
+            }
+            output.sort();
+        }
+        return(output);
+    }
+
+
+    var array = ["fred", true, 5, 3];
+
+    filterNumbers(array);
+
+    /*   Write a function, getOlder() that takes in array of dog objects and increases the value of the
+    age properties by 1.
+
+
+    Example input: [
+        {
+            name: "Chompers",
+            breed: "Pug",
+            age: 7
+        },
+        {
+            name: "Freddy",
+            breed: "Lab",
+            age: 4
+        },
+        {
+            name: "Mr. Pig",
+            breed: "Mastif",
+            age: 10
+        }
+    ];
+
+    Example output: [
+        {
+            name: "Chompers",
+            breed: "Pug",
+            age: 8
+        },
+        {
+            name: "Freddy",
+            breed: "Lab",
+            age: 5
+        },
+        {
+            name: "Mr. Pig",
+            breed: "Mastif",
+            age: 11
+        }
+    ];
+*/
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
