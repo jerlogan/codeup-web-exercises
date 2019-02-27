@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>National Parks</title>
+    <style>
+        body {
+            font-family: "Arial";
+        }
+        dl {
+            line-height: 30px;
+        }
+        dt {
+            font-size: 20px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .invisible {
+            visibility: hidden;
+        }
+        .highlighted {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<h1><a href="#" class="toggle-answers">Show/Hide all answers</a></h1>
+
+<dl>
+    <dt>Which national park was the first one ever established?</dt>
+    <dd class="toggle invisible">Yellowstone National Park, founded in 1872.</dd>
+
+    <dt>How many people work for the National Park service?</dt>
+    <dd class="toggle invisible">20,000 employees and  over 300,000 volunteers.</dd>
+
+    <dt>What is the average fiscal year budget for national parks over the past 5 years?</dt>
+    <dd class="toggle invisible">$2.84 billion</dd>
+
+    <dt>Which national park is the largest?</dt>
+    <dd class="toggle invisible">Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres.</dd>
+
+    <dt>Which national park is the smallest?</dt>
+    <dd class="toggle invisible">Thaddeus Kosciuszko National Memorial, PA, at 0.02 acres.</dd>
+
+    <dt>How many yearly visitors come to the national parks?</dt>
+    <dd class="toggle invisible">Nearly 331,000,000.</dd>
+
+    <dt>Which parks are the most visited?</dt>
+    <dd class="toggle invisible">Great Smoky Mountains (9 million guests per year) and Grand Canyon (4 million guests per year).</dd>
+
+    <dt>Which state(s) are home to the most national parks?</dt>
+    <dd class="toggle invisible">California and Alaska (8).</dd>
+
+    <dt>Which park is the least visited?</dt>
+    <dd class="toggle invisible">Kobuk Valley National Park (3,000 visitors per year).</dd>
+
+    <dt>Are all national parks completely "natural"?</dt>
+    <dd class="toggle invisible">No. Mesa Verde National Park was the first park to be recognized as man-made, as some of the
+    rock has been scuplted by Native Americans. Alcatraz is a former prison site and Molokai Island was
+    a former leper colony.</dd>
+</dl>
+
+<script  src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+<script>
+    "use strict";
+
+    $('.toggle-answers').click(function(e){
+        e.preventDefault();
+        $('.toggle').toggleClass('invisible');
+    });
+
+    $('dt').click(function(){
+        $(this).toggleClass('highlighted');
+    });
+</script>
+</body>
+</html>
