@@ -3,25 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>National Parks</title>
-    <style>
-        body {
-            font-family: "Arial";
-        }
-        dl {
-            line-height: 30px;
-        }
-        dt {
-            font-size: 20px;
-            font-weight: bold;
-            display: inline-block;
-        }
-        .invisible {
-            visibility: hidden;
-        }
-        .highlighted {
-            background-color: yellow;
-        }
-    </style>
+    <link rel="stylesheet" href="css/jquery_faq.css">
 </head>
 <body>
 
@@ -61,6 +43,7 @@
     a former leper colony.</dd>
 </dl>
 
+<h1>Interesting Facts</h1>
 <h3>Death Valley National Park</h3>
 <ul>
     <li>The average yearly rainfall is 2.36 inches.</li>
@@ -83,22 +66,43 @@
     <li>Visitors may purchase souvenirs but aren't allowed to actually bring them home. This is known as "Leave No Trace".</li>
 </ul>
 
+<button class="toggle-last-li">Highlight the last interesting fact for each park!</button>
+
+<!--code for picture frames!-->
+
+<div class="container">
+    <div class="picture-frame-container">
+        <div class="picture-frame1">
+
+
+        </div>
+        <button class="button1">Change</button>
+
+    </div>
+    <div class="picture-frame-container">
+        <div class="picture-frame2">
+
+
+        </div>
+        <button class="button2">Change</button>
+    </div>
+    <div class="picture-frame-container">
+        <div class="picture-frame3">
+
+
+        </div>
+        <button class="button3">Change</button>
+    </div>
+</div>
+
+
+
+
+
 
 
 <script  src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/jquery_faq.js"></script>
 
-
-<script>
-    "use strict";
-
-    $('.toggle-answers').click(function(e){
-        e.preventDefault();
-        $('.toggle').toggleClass('invisible');
-    });
-
-    $('dt').click(function(){
-        $(this).toggleClass('highlighted');
-    });
-</script>
 </body>
 </html>
