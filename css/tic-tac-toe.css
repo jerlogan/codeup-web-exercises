@@ -1,0 +1,85 @@
+body {
+    width: 100%;
+}
+.left-container {
+    width: 50%;
+    height: 500px;
+    float: left;
+}
+.right-container {
+    width: 50%;
+    height: 500px;
+    float: left;
+}
+
+/*Icon declarations*/
+
+.player-one-icon {
+    background-image: url("../img/circleicon1.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.player-two-icon {
+    background-image: url("../img/red-x-png-4.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*tic-tac-toe table and title*/
+
+.tic-tac-toe-title {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+.tic-tac-toe-table {
+    width: 300px;
+    height: 300px;
+    border: 3px solid black;
+    box-shadow: 4px 4px 12px black;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    background-color: white;
+}
+.small-square {
+    width: 98px;
+    height: 98px;
+    float: left;
+    border: 1px solid black;
+}
+
+/*message portal*/
+
+.message-portal {
+    width: 350px;
+    height: 200px;
+    margin: 20px auto;
+    border: 2px solid black;
+    box-shadow: 4px 4px 12px black;
+    text-align: center;
+}
+.button {
+    line-height: 200px;
+}
+.start-game {
+    font-size: 25px;
+    border-radius: 5px 5px 5px 5px;
+}
+.start-game:hover {
+    font-size: 25px;
+    background-image: linear-gradient(black, grey);
+    color: white;
+}
+.player-one-turn-info {
+    display: none;
+}
+.player-two-turn-info {
+    display: none;
+}
+
+
+
+
