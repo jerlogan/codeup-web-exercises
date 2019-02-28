@@ -9,21 +9,24 @@ $(document).ready(function(){
 
    //Logic for changing the html to which player's turn it is...and their specified icon.
 
-    $('.start-game').click(function(e){
-       e.preventDefault();
-       gameStarted = true;
+    $('.start-game').click(function(e) {
+        e.preventDefault();
 
-       if (turnNumber % 2 === 1) {
+        gameStarted = true;
+
+        if (turnNumber % 2 === 1) {
             $(this).hide();
             $('.player-one-turn-info').show();
-            console.log(turnNumber);
-       }
 
-       else if (turnNumber % 2 === 0) {
-           $(this).hide();
-           $('.player-two-turn-info').show();
-           console.log(turnNumber);
-       }
+            console.log(turnNumber);
+        } else if (turnNumber % 2 === 0) {
+            $(this).hide();
+            $('.player-two-turn-info').show();
+            console.log(turnNumber);
+        }
+        turnNumber++;
+
+    });
 
     //conditional checking which turn it is: player 1 (number is odd) or player 2 (number is even)
 
@@ -35,21 +38,8 @@ $(document).ready(function(){
                 $(this).addClass('player-two-icon');
             }
             turnNumber++;
-            return turnNumber;
+
         });
-
-
-
-
-
-
-
-
-
-
-
-
-    });
 
 
 
