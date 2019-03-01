@@ -1,85 +1,320 @@
+
+
+
+/*small screens*/
+
+@media screen and (min-width: 280px) {
+    body {
+        background-color: lightgreen;
+    }
+    .left-container {
+        width: 100%;
+        height: 400px;
+
+    }
+    .right-container {
+        width: 100%;
+        height: 500px;
+
+    }
+
+    /*tic-tac-toe table and title*/
+
+    .tic-tac-toe-title {
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+    }
+    .tic-tac-toe-table {
+        width: 300px;
+        height: 300px;
+        border: 3px solid black;
+        box-shadow: 4px 4px 12px black;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 0;
+        background-color: white;
+    }
+    .small-square {
+        width: 98px;
+        height: 98px;
+        float: left;
+        border: 1px solid black;
+    }
+
+    /*message portal*/
+
+    .message-portal {
+        width: 350px;
+        height: 200px;
+        margin: 20px auto;
+        border: 2px solid black;
+        box-shadow: 4px 4px 12px black;
+        text-align: center;
+        background-color: white;
+    }
+    .button {
+        line-height: 200px;
+    }
+    .start-game {
+        font-size: 25px;
+        border-radius: 5px 5px 5px 5px;
+    }
+    .start-game:hover {
+        font-size: 25px;
+        background-image: linear-gradient(black, grey);
+        color: white;
+    }
+    .player-one-turn-info {
+        display: none;
+        height: 200px;
+    }
+    .player-two-turn-info {
+        display: none;
+    }
+    .reset-game {
+        font-size: 25px;
+        border-radius: 5px 5px 5px 5px;
+    }
+    .reset-game:hover {
+        font-size: 25px;
+        background-image: linear-gradient(black, grey);
+        color: white;
+    }
+
+    /*pick icon screen*/
+
+    .pick-icon-screen {
+        width: 350px;
+        height: 200px;
+        margin: 20px auto;
+        border: 2px solid black;
+        box-shadow: 4px 4px 12px black;
+        text-align: center;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .player-one-button,
+    .player-two-button {
+        font-size: 18px;
+        border-top: none;
+        background-color:
+    }
+
+    .player-one-button:hover,
+    .player-two-button:hover {
+        background-image: linear-gradient(black, grey);
+        color: white;
+    }
+    .icon-grid-container {
+        height: 165px;
+        width: 90%;
+        margin: 5px auto;
+
+    }
+    .icon-square {
+        border: 1px solid red;
+        width: 50px;
+        height: 50px;
+        float: left;
+        margin: 0;
+        padding: 0;
+    }
+
+    /*Icon declarations*/
+
+    .player-one-icon {
+        background-image: url("../img/circleicon1.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .player-one-big-icon {
+        background-image: url("../img/circleicon1.png");
+        background-size: 15%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 80px;
+        margin-top: 0;
+    }
+    .player-two-icon {
+        background-image: url("../img/red-x-png-4.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .player-two-big-icon {
+        background-image: url("../img/red-x-png-4.png");
+        background-size: 15%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 80px;
+    }
+
+    .icon-square {
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .icon-square:hover{
+        background-color: greenyellow;
+        background-size: 100%;
+
+    }
+
+    /*  black circle  */
+    .icon-square1 {
+        background-image: url("../img/circleicon1.png");
+    }
+
+    /*  red X  */
+    .icon-square2 {
+        background-image: url("../img/red-x-png-4.png");
+    }
+
+    /*  red X  */
+    .icon-square3 {
+        background-image: url("../img/clash-royale.png");
+    }
+
+    /*  red X  */
+    .icon-square4 {
+        background-image: url("../img/umbrella-icon.png");
+    }
+
+    /*  red X  */
+    .icon-square5 {
+        background-image: url("../img/ig-icon.png");
+    }
+
+    /*  red X  */
+    .icon-square6 {
+        background-image: url("../img/fb-icon.png");
+    }
+
+    /*  red X  */
+    .icon-square7 {
+        background-image: url("../img/pikashock-icon.png");
+
+    }
+    .icon-square8 {
+        background-image: url("../img/meme-icon1.png");
+
+    }
+    .icon-square9 {
+        background-image: url("../img/yao-icon.png");
+
+    }
+    .icon-square10 {
+        background-image: url("../img/spongebob-meme-icon.png");
+
+    }
+    .icon-square11 {
+        background-image: url("../img/shrek-icon.png");
+
+    }
+    .icon-square12 {
+        background-image: url("../img/codeup-icon.png");
+
+    }
+    .icon-square13 {
+        background-image: url("../img/pepsi-icon.png");
+
+    }
+    .icon-square14 {
+        background-image: url("../img/mario-icon.png");
+
+    }
+    .icon-square15 {
+        background-image: url("../img/bowser-icon.png");
+
+
+    }
+    .icon-square16 {
+        background-image: url("../img/puppy-icon.png");
+
+    }
+    .icon-square17 {
+        background-image: url("../img/james-icon.png");
+
+    }
+    .icon-square18 {
+        background-image: url("../img/fire-icon.png");
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+/*medium screens*/
+
+@media screen and (min-width: 780px) {
+
 body {
     width: 100%;
+    background-color: #3B94D9;
 }
+
+.right-container,
 .left-container {
+    float: left;
     width: 50%;
-    height: 500px;
-    float: left;
-}
-.right-container {
-    width: 50%;
-    height: 500px;
-    float: left;
 }
 
-/*Icon declarations*/
-
-.player-one-icon {
-    background-image: url("../img/circleicon1.png");
-    background-size: 70%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.player-two-icon {
-    background-image: url("../img/red-x-png-4.png");
-    background-size: 70%;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
-/*tic-tac-toe table and title*/
 
-.tic-tac-toe-title {
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
-}
-.tic-tac-toe-table {
-    width: 300px;
-    height: 300px;
-    border: 3px solid black;
-    box-shadow: 4px 4px 12px black;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 0;
-    background-color: white;
-}
-.small-square {
-    width: 98px;
-    height: 98px;
-    float: left;
-    border: 1px solid black;
-}
+/*big screens*/
 
-/*message portal*/
 
-.message-portal {
-    width: 350px;
-    height: 200px;
-    margin: 20px auto;
-    border: 2px solid black;
-    box-shadow: 4px 4px 12px black;
-    text-align: center;
+@media screen and (min-width: 1050px) {
+    body {
+        background-color: yellow;
+    }
+    .tic-tac-toe-title {
+        width: 65%;
+        float: right;
+        text-align: center;
+    }
+    .tic-tac-toe-table {
+        width: 400px;
+        height: 400px;
+        border: 3px solid black;
+        box-shadow: 4px 4px 12px black;
+        overflow: hidden;
+        padding: 0;
+        background-color: white;
+        float: right;
+    }
+    .small-square {
+        width: calc(394px / 3);
+        height: calc(394px / 3);
+        float: left;
+        border: 1px solid black;
+    }
+    .pick-icon-screen,
+    .message-portal {
+    }
 }
-.button {
-    line-height: 200px;
-}
-.start-game {
-    font-size: 25px;
-    border-radius: 5px 5px 5px 5px;
-}
-.start-game:hover {
-    font-size: 25px;
-    background-image: linear-gradient(black, grey);
-    color: white;
-}
-.player-one-turn-info {
-    display: none;
-}
-.player-two-turn-info {
-    display: none;
-}
-
 
 
 
