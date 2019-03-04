@@ -59,6 +59,8 @@
     .start-game {
         font-size: 25px;
         border-radius: 5px 5px 5px 5px;
+        padding: 0;
+        width: 80%;
     }
     .start-game:hover {
         font-size: 25px;
@@ -99,12 +101,17 @@
     .player-two-button {
         font-size: 18px;
         border-top: none;
-        background-color:
     }
 
     .player-one-button:hover,
     .player-two-button:hover {
         background-image: linear-gradient(black, grey);
+        color: white;
+    }
+
+    .player-one-button:focus,
+    .player-two-button:focus {
+        background-image: linear-gradient(blue, cornflowerblue);
         color: white;
     }
     .icon-grid-container {

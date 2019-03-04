@@ -7,7 +7,8 @@ $(document).ready(function(){
    var gameStarted = false;
 
 
-   //Logic for changing the html to which player's turn it is...and their specified icon.
+
+        //Logic for changing the html to which player's turn it is...and their specified icon.
 
     $('.start-game').click(function(e) {
         e.preventDefault();
@@ -18,6 +19,10 @@ $(document).ready(function(){
         console.log(gameStarted);
 
     });
+
+    // restarts game when reset button is pressed.
+
+    // $('.')
 
     //conditional checking which turn it is: player 1 (number is odd) or player 2 (number is even)
 
@@ -41,6 +46,35 @@ console.log(gameStarted);
                 turnNumber++;
             }
         });
+
+       // This allows the players to select an icon for each player.
+
+
+    // $('button.player-one-button').click(function(e){
+    //     e.preventDefault();
+    //     console.log('player one ready');
+    //
+    // })
+    //
+    // $('button.player-two-button').click(function(e){
+    //     e.preventDefault();
+    //     console.log('player two ready');
+    //
+    // })
+
+    $('button.player-one-button, button.player-two-button').click(function(e){
+
+        if ($(this).class == 'player-one-button') {
+            e.preventDefault();
+            console.log('player one ready');
+        } else if ($(this).class == 'player-two-button') {
+            e.preventDefault();
+            console.log('player two ready');
+        }
+
+    })
+
+
 
 
 
