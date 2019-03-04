@@ -19,10 +19,8 @@ $(document).ready(function() {
 
     $('.toggle-last-li').click(function (e) {
         e.preventDefault();
-        $('li').each(function (index) {
-            if ((index + 1) % 4 === 0) {
-                $(this).css('background-color', 'yellow');
-            }
+        $('ul').each(function (i, e) {
+            $(this).children().last().css('background-color', 'yellow')
         })
     });
 
@@ -40,5 +38,25 @@ $(document).ready(function() {
 
     //Picture frame logic
 
+    $('container')
 
+    $('button.button1').click(function(e){
+        e.preventDefault();
+        $('div.div1').removeClass('picture-frame1 picture1')
+                     .addClass('picture-frame2 picture2');
+        $('div.div2').removeClass('picture-frame2')
+                     .addClass('picture-frame1')
+    });
+
+    $('button.button2').click(function(e){
+        e.preventDefault();
+        $('div.div2').removeClass('picture-frame1 picture1')
+                     .addClass('picture-frame2 picture2');
+    });
+
+    $('button.button3').click(function(e){
+        e.preventDefault();
+        $('div.div3').removeClass('picture-frame1 picture1')
+                     .addClass('picture-frame2 picture2');
+    });
 });

@@ -18,6 +18,9 @@ dt {
 button.toggle-last-li {
     font-size: 18px;
 }
+li {
+    display: inline-block;
+}
 
 /*picture frames*/
 
@@ -26,7 +29,9 @@ button.toggle-last-li {
     width: 100%;
     margin: 20px auto;
 }
-.picture-frame-container {
+.picture-frame-container1,
+.picture-frame-container2,
+.picture-frame-container3 {
     width: 300px;
     height: 50%;
     float: left;
@@ -43,16 +48,25 @@ button.toggle-last-li {
 
 .picture-frame1 {
     border: 4px solid yellow;
+}
+.picture1 {
     background-image: url("../img/death-valley-istock.jpg");
+    width: 100%;
 }
 .picture-frame2 {
     border: 4px solid red;
+}
+.picture2 {
     background-image: url("../img/YNP_hero1_v2.gif");
 }
+
 .picture-frame3 {
     border: 4px solid green;
+}
+.picture3 {
     background-image: url("../img/national-park-3.jpeg");
 }
+
 .container button {
     width: 100px;
     margin: 30px 100px;

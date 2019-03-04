@@ -62,16 +62,18 @@ console.log(gameStarted);
     //
     // })
 
-    $('button.player-one-button, button.player-two-button').click(function(e){
-
-        if ($(this).class == 'player-one-button') {
+    $('button').click(function(e){
+        if (e.target.id === 'player-one-button') {
             e.preventDefault();
             console.log('player one ready');
-        } else if ($(this).class == 'player-two-button') {
+            $('.icon-square').click(function(){
+                console.log($(this))
+            })
+
+        } else if (e.target.id === 'player-two-button') {
             e.preventDefault();
             console.log('player two ready');
         }
-
     })
 
 

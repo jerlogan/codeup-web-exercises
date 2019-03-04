@@ -97,20 +97,20 @@
         overflow: hidden;
     }
 
-    .player-one-button,
-    .player-two-button {
+    #player-one-button,
+    #player-two-button {
         font-size: 18px;
         border-top: none;
     }
 
-    .player-one-button:hover,
-    .player-two-button:hover {
+    #player-one-button:hover,
+    #player-two-button:hover {
         background-image: linear-gradient(black, grey);
         color: white;
     }
 
-    .player-one-button:focus,
-    .player-two-button:focus {
+    #player-one-button:focus,
+    #player-two-button:focus {
         background-image: linear-gradient(blue, cornflowerblue);
         color: white;
     }
