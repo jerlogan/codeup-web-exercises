@@ -73,10 +73,12 @@
     }
     .player-two-turn-info {
         display: none;
+        height: 200px;
     }
     .reset-game {
         font-size: 25px;
         border-radius: 5px 5px 5px 5px;
+        margin-top: 5px;
     }
     .reset-game:hover {
         font-size: 25px;
@@ -88,7 +90,7 @@
 
     .pick-icon-screen {
         width: 350px;
-        height: 200px;
+        height: 250px;
         margin: 20px auto;
         border: 2px solid black;
         box-shadow: 4px 4px 12px black;
@@ -129,127 +131,177 @@
         padding: 0;
     }
 
+    /*submit icon button*/
+
+    #submit-icon-selection {
+        font-size: 18px;
+    }
+    #submit-icon-selection:hover {
+        background-image: linear-gradient(red, darkred);
+        color: white;
+    }
+    #submit-icon-selection:focus {
+        font-size: 18px;
+    }
+
+
+
+
     /*Icon declarations*/
 
-    .player-one-icon {
-        background-image: url("../img/circleicon1.png");
-        background-size: 70%;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
+
     .player-one-big-icon {
-        background-image: url("../img/circleicon1.png");
-        background-size: 15%;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 80px;
-        margin-top: 0;
-    }
-    .player-two-icon {
-        background-image: url("../img/red-x-png-4.png");
-        background-size: 70%;
-        background-repeat: no-repeat;
-        background-position: center;
+        width: 70px;
+        height: 70px;
+        margin: 0 auto;
     }
     .player-two-big-icon {
-        background-image: url("../img/red-x-png-4.png");
-        background-size: 15%;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 80px;
+        width: 70px;
+        height: 70px;
+        margin: 0 auto;
     }
-
-    .icon-square {
+    .icon-square
+    {
         background-size: 80%;
         background-repeat: no-repeat;
         background-position: center;
     }
-
     .icon-square:hover{
         background-color: greenyellow;
         background-size: 100%;
 
     }
-
-    /*  black circle  */
     .icon-square1 {
         background-image: url("../img/circleicon1.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
-    /*  red X  */
+
     .icon-square2 {
         background-image: url("../img/red-x-png-4.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
-    /*  red X  */
+
     .icon-square3 {
         background-image: url("../img/clash-royale.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
-    /*  red X  */
+
     .icon-square4 {
         background-image: url("../img/umbrella-icon.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
-    /*  red X  */
+
     .icon-square5 {
         background-image: url("../img/ig-icon.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
-    /*  red X  */
+
     .icon-square6 {
         background-image: url("../img/fb-icon.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
-    /*  red X  */
+
     .icon-square7 {
         background-image: url("../img/pikashock-icon.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
 
     }
     .icon-square8 {
         background-image: url("../img/meme-icon1.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
 
     }
     .icon-square9 {
         background-image: url("../img/yao-icon.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
 
     }
     .icon-square10 {
         background-image: url("../img/spongebob-meme-icon.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
 
     }
     .icon-square11 {
         background-image: url("../img/shrek-icon.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
 
     }
     .icon-square12 {
         background-image: url("../img/codeup-icon.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
 
     }
     .icon-square13 {
         background-image: url("../img/pepsi-icon.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
 
     }
     .icon-square14 {
         background-image: url("../img/mario-icon.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
 
     }
     .icon-square15 {
         background-image: url("../img/bowser-icon.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
 
 
     }
     .icon-square16 {
         background-image: url("../img/puppy-icon.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
 
     }
     .icon-square17 {
         background-image: url("../img/james-icon.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
 
     }
     .icon-square18 {
         background-image: url("../img/fire-icon.png");
-
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
 
