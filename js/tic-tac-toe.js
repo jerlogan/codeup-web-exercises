@@ -29,34 +29,25 @@ $(document).ready(function(){
 
     // $('.')
 
+
+
     //this function hears for which player's turn it is to select an icon
 
 
     $('button').click(function(e) {
         if (e.target.id === 'player-one-button') {
+
             playerTurnToPickIcon = 'player one';
+
             $('.player-turn-message').html('Pick your poison player one!')
                                      .removeClass('player-two-message')
                                      .addClass('player-one-message');
-            $('.icon-square').click(function() {
-                $(this).addClass('player-one-hover');
+
+
+            $('.icon-square').click(function () {
+                $(this).addClass('player-one-select');
                 $('.player-turn-message').html("You've chosen wisely!");
             });
-
-
-
-
-
-
-
-            $('.icon-square').hover(function() {
-                $(this).removeClass('player-two-hover');
-                $(this).addClass('player-one-hover');
-            }, function() {
-                $(this).removeClass('player-one-hover');
-            });
-
-
 
         } else if (e.target.id === 'player-two-button') {
             playerTurnToPickIcon = 'player two';
@@ -64,18 +55,13 @@ $(document).ready(function(){
                                      .removeClass('player-one-message')
                                      .addClass('player-two-message');
 
-            $('.icon-square').click(function () {
-                $(this).addClass('player-two-hover');
+            $('.icon-square').one('click', function () {
+                $(this).addClass('player-two-select');
                 $('.player-turn-message').html("Great choice!");
-            });
-            $('.icon-square').hover(function () {
-                $(this).addClass('player-two-hover');
-            }, function () {
-                $(this).removeClass('player-two-hover');
             });
         }
 
-        return playerTurnToPickIcon;
+        console.log(playerTurnToPickIcon);
     });
 
 

@@ -128,10 +128,10 @@
         width: 90%;
         margin: 5px auto;
     }
-    .player-one-hover {
+    .player-one-select {
         background-color: deepskyblue;
     }
-    .player-two-hover {
+    .player-two-select {
         background-color: yellow;
     }
 
@@ -178,6 +178,10 @@
         background-size: 80%;
         background-repeat: no-repeat;
         background-position: center;
+    }
+    .icon-square:hover
+    {
+        background-size: 100%;
     }
 
 
