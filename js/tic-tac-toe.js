@@ -31,139 +31,185 @@ $(document).ready(function(){
 
     //this function hears for which player's turn it is to select an icon
 
+
     $('button').click(function(e) {
         if (e.target.id === 'player-one-button') {
             playerTurnToPickIcon = 'player one';
+            $('.player-turn-message').html('Pick your poison player one!')
+                                     .removeClass('player-two-message')
+                                     .addClass('player-one-message');
+            $('.icon-square').click(function() {
+                $(this).addClass('player-one-hover');
+                $('.player-turn-message').html("You've chosen wisely!");
+            });
+
+
+
+
+
+
+
+            $('.icon-square').hover(function() {
+                $(this).removeClass('player-two-hover');
+                $(this).addClass('player-one-hover');
+            }, function() {
+                $(this).removeClass('player-one-hover');
+            });
+
+
 
         } else if (e.target.id === 'player-two-button') {
             playerTurnToPickIcon = 'player two';
+            $('.player-turn-message').html('Your turn player two!')
+                                     .removeClass('player-one-message')
+                                     .addClass('player-two-message');
+
+            $('.icon-square').click(function () {
+                $(this).addClass('player-two-hover');
+                $('.player-turn-message').html("Great choice!");
+            });
+            $('.icon-square').hover(function () {
+                $(this).addClass('player-two-hover');
+            }, function () {
+                $(this).removeClass('player-two-hover');
+            });
         }
+
+        return playerTurnToPickIcon;
     });
+
 
     //this function listens for which icon is being selected by each player.
 
-    $('.icon-square').click(function() {
 
-        if (playerTurnToPickIcon === 'player one') {
+    $('.icon-square').each(function(i, e) {
+        $(this).click(function() {
 
-            //Conditionals begin to check for each icon
+            if (playerTurnToPickIcon === 'player one') {
 
-            switch ($(this).index()) {
-                case 0:
-                    playerOnePickedIcon = 'icon-square1';
-                    break;
-                case 1:
-                    playerOnePickedIcon = 'icon-square2';
-                    break;
-                case 2:
-                    playerOnePickedIcon = 'icon-square3';
-                    break;
-                case 3:
-                    playerOnePickedIcon = 'icon-square4';
-                    break;
-                case 4:
-                    playerOnePickedIcon = 'icon-square5';
-                    break;
-                case 5:
-                    playerOnePickedIcon = 'icon-square6';
-                    break;
-                case 6:
-                    playerOnePickedIcon = 'icon-square7';
-                    break;
-                case 7:
-                    playerOnePickedIcon = 'icon-square8';
-                    break;
-                case 8:
-                    playerOnePickedIcon = 'icon-square9';
-                    break;
-                case 9:
-                    playerOnePickedIcon = 'icon-square10';
-                    break;
-                case 10:
-                    playerOnePickedIcon = 'icon-square11';
-                    break;
-                case 11:
-                    playerOnePickedIcon = 'icon-square12';
-                    break;
-                case 12:
-                    playerOnePickedIcon = 'icon-square13';
-                    break;
-                case 13:
-                    playerOnePickedIcon = 'icon-square14';
-                    break;
-                case 14:
-                    playerOnePickedIcon = 'icon-square15';
-                    break;
-                case 15:
-                    playerOnePickedIcon = 'icon-square16';
-                    break;
-                case 16:
-                    playerOnePickedIcon = 'icon-square17';
-                    break;
-                case 17:
-                    playerOnePickedIcon = 'icon-square18';
+
+
+                //Conditionals begin to check for each icon
+
+                switch ($(this).index()) {
+                    case 0:
+                        playerOnePickedIcon = 'icon-square1';
+                        break;
+                    case 1:
+                        playerOnePickedIcon = 'icon-square2';
+                        break;
+                    case 2:
+                        playerOnePickedIcon = 'icon-square3';
+                        break;
+                    case 3:
+                        playerOnePickedIcon = 'icon-square4';
+                        break;
+                    case 4:
+                        playerOnePickedIcon = 'icon-square5';
+                        break;
+                    case 5:
+                        playerOnePickedIcon = 'icon-square6';
+                        break;
+                    case 6:
+                        playerOnePickedIcon = 'icon-square7';
+                        break;
+                    case 7:
+                        playerOnePickedIcon = 'icon-square8';
+                        break;
+                    case 8:
+                        playerOnePickedIcon = 'icon-square9';
+                        break;
+                    case 9:
+                        playerOnePickedIcon = 'icon-square10';
+                        break;
+                    case 10:
+                        playerOnePickedIcon = 'icon-square11';
+                        break;
+                    case 11:
+                        playerOnePickedIcon = 'icon-square12';
+                        break;
+                    case 12:
+                        playerOnePickedIcon = 'icon-square13';
+                        break;
+                    case 13:
+                        playerOnePickedIcon = 'icon-square14';
+                        break;
+                    case 14:
+                        playerOnePickedIcon = 'icon-square15';
+                        break;
+                    case 15:
+                        playerOnePickedIcon = 'icon-square16';
+                        break;
+                    case 16:
+                        playerOnePickedIcon = 'icon-square17';
+                        break;
+                    case 17:
+                        playerOnePickedIcon = 'icon-square18';
+                }
+                return playerOnePickedIcon;
+
+            } else if (playerTurnToPickIcon === 'player two') {
+
+
+
+                switch ($(this).index()) {
+                    case 0:
+                        playerTwoPickedIcon = 'icon-square1';
+                        break;
+                    case 1:
+                        playerTwoPickedIcon = 'icon-square2';
+                        break;
+                    case 2:
+                        playerTwoPickedIcon = 'icon-square3';
+                        break;
+                    case 3:
+                        playerTwoPickedIcon = 'icon-square4';
+                        break;
+                    case 4:
+                        playerTwoPickedIcon = 'icon-square5';
+                        break;
+                    case 5:
+                        playerTwoPickedIcon = 'icon-square6';
+                        break;
+                    case 6:
+                        playerTwoPickedIcon = 'icon-square7';
+                        break;
+                    case 7:
+                        playerTwoPickedIcon = 'icon-square8';
+                        break;
+                    case 8:
+                        playerTwoPickedIcon = 'icon-square9';
+                        break;
+                    case 9:
+                        playerTwoPickedIcon = 'icon-square10';
+                        break;
+                    case 10:
+                        playerTwoPickedIcon = 'icon-square11';
+                        break;
+                    case 11:
+                        playerTwoPickedIcon = 'icon-square12';
+                        break;
+                    case 12:
+                        playerTwoPickedIcon = 'icon-square13';
+                        break;
+                    case 13:
+                        playerTwoPickedIcon = 'icon-square14';
+                        break;
+                    case 14:
+                        playerTwoPickedIcon = 'icon-square15';
+                        break;
+                    case 15:
+                        playerTwoPickedIcon = 'icon-square16';
+                        break;
+                    case 16:
+                        playerTwoPickedIcon = 'icon-square17';
+                        break;
+                    case 17:
+                        playerTwoPickedIcon = 'icon-square18';
+                }
+                return playerTwoPickedIcon;
             }
-            return playerOnePickedIcon;
-
-        } else if (playerTurnToPickIcon === 'player two') {
-
-            switch ($(this).index()) {
-                case 0:
-                    playerTwoPickedIcon = 'icon-square1';
-                    break;
-                case 1:
-                    playerTwoPickedIcon = 'icon-square2';
-                    break;
-                case 2:
-                    playerTwoPickedIcon = 'icon-square3';
-                    break;
-                case 3:
-                    playerTwoPickedIcon = 'icon-square4';
-                    break;
-                case 4:
-                    playerTwoPickedIcon = 'icon-square5';
-                    break;
-                case 5:
-                    playerTwoPickedIcon = 'icon-square6';
-                    break;
-                case 6:
-                    playerTwoPickedIcon = 'icon-square7';
-                    break;
-                case 7:
-                    playerTwoPickedIcon = 'icon-square8';
-                    break;
-                case 8:
-                    playerTwoPickedIcon = 'icon-square9';
-                    break;
-                case 9:
-                    playerTwoPickedIcon = 'icon-square10';
-                    break;
-                case 10:
-                    playerTwoPickedIcon = 'icon-square11';
-                    break;
-                case 11:
-                    playerTwoPickedIcon = 'icon-square12';
-                    break;
-                case 12:
-                    playerTwoPickedIcon = 'icon-square13';
-                    break;
-                case 13:
-                    playerTwoPickedIcon = 'icon-square14';
-                    break;
-                case 14:
-                    playerTwoPickedIcon = 'icon-square15';
-                    break;
-                case 15:
-                    playerTwoPickedIcon = 'icon-square16';
-                    break;
-                case 16:
-                    playerTwoPickedIcon = 'icon-square17';
-                    break;
-                case 17:
-                    playerTwoPickedIcon = 'icon-square18';
-            }
-            return playerTwoPickedIcon;
-        }
+        });
     });
 
     //conditional checking which turn it is: player 1 (number is odd) or player 2 (number is even)

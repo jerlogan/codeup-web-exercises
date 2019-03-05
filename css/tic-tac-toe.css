@@ -99,50 +99,57 @@
         overflow: hidden;
     }
 
-    #player-one-button,
+    #player-one-button {
+        font-size: 18px;
+        background-color: deepskyblue;
+        border: 3px solid white;
+    }
     #player-two-button {
         font-size: 18px;
-        border-top: none;
+        background-color: yellow;
+        border: 3px solid white;
     }
-
     #player-one-button:hover,
-    #player-two-button:hover {
-        background-image: linear-gradient(black, grey);
-        color: white;
+    #player-one-button:focus {
+        font-size: 18px;
+        background-color: deepskyblue;
+        border: 3px solid black;
+        outline: none;
     }
-
-    #player-one-button:focus,
+    #player-two-button:hover,
     #player-two-button:focus {
-        background-image: linear-gradient(blue, cornflowerblue);
-        color: white;
+        font-size: 18px;
+        background-color: yellow;
+        border: 3px solid black;
+        outline: none;
     }
     .icon-grid-container {
         height: 165px;
         width: 90%;
         margin: 5px auto;
-
     }
-    .icon-square {
-        border: 1px solid red;
-        width: 50px;
-        height: 50px;
-        float: left;
-        margin: 0;
-        padding: 0;
+    .player-one-hover {
+        background-color: deepskyblue;
+    }
+    .player-two-hover {
+        background-color: yellow;
     }
 
-    /*submit icon button*/
+    .player-one-message {
+        color: deepskyblue;
+        background-color: black;
+        font-size: larger;
+        display: inline-block;
+        padding: 3px;
+    }
+    .player-two-message {
+        color: yellow;
+        background-color: black;
+        font-size: larger;
+        display: inline-block;
+        padding: 3px;
+    }
 
-    #submit-icon-selection {
-        font-size: 18px;
-    }
-    #submit-icon-selection:hover {
-        background-image: linear-gradient(red, darkred);
-        color: white;
-    }
-    #submit-icon-selection:focus {
-        font-size: 18px;
-    }
 
 
 
@@ -162,13 +169,17 @@
     }
     .icon-square
     {
+        border: 1px solid red;
+        width: 50px;
+        height: 50px;
+        float: left;
+        margin: 0;
+        padding: 0;
         background-size: 80%;
         background-repeat: no-repeat;
         background-position: center;
     }
-    .icon-square:hover{
-        background-color: greenyellow;
-        background-size: 100%;
+
 
     }
     .icon-square1 {
@@ -308,21 +319,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
 
 /*medium screens*/
 
