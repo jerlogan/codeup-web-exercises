@@ -79,11 +79,4 @@ $(document).ready(function() {
     setTimeout(function() {
         fadeIn()
     }, 8000);
-
-
-
-
-
-
-
 });
