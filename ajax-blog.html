@@ -3,6 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        body {
+            width: 90%;
+            margin: 0 auto;
+        }
+        h1 {
+            display: inline;
+            background-color: #fff236;
+        }
+        h4 {
+
+        }
+        h6 {
+            float: right;
+        }
+
+
+
+    </style>
 </head>
 <body>
 
@@ -14,8 +33,8 @@
     $.ajax("data/blog.json").done(function(data) {
        $(data).each(function(i, e) {
            var blogItemsString = '<h1>' + this.title + '</h1>' +
-                                 '<h3>' + this.categories + '</h3>' +
                                  '<h6>' + this.date + '</h6>' +
+                                 '<h4>' + 'Categories: ' + this.categories.join(', ') + '</h4>' +
                                  '<p>' + this.content + '</p>';
            $('#posts').append(blogItemsString);
        })
