@@ -27,7 +27,9 @@ $(document).ready(function() {
     // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
 
     $('h3').click(function () {
-        $(this).next().children().css('font-weight', 'bold');
+        $(this).next().children().each(function(i, e){
+            $(this).slideToggle();
+        });
     });
 
     // When any list item is clicked, first li of the parent ul should have a font color of blue.
@@ -38,7 +40,6 @@ $(document).ready(function() {
 
     //Picture frame logic
 
-    $('container')
 
     $('button.button1').click(function(e){
         e.preventDefault();
@@ -59,4 +60,30 @@ $(document).ready(function() {
         $('div.div3').removeClass('picture-frame1 picture1')
                      .addClass('picture-frame2 picture2');
     });
+
+    $('span').click(function(){
+       $('#newsletter').slideUp();
+    });
+
+    //pop-up spam window
+
+    $('.register-popup').hide();
+
+    function fadeIn() {
+        $('.register-popup').fadeIn();
+        $('.close').click(function(){
+            $('.register-popup').fadeOut();
+        })
+    }
+
+    setTimeout(function() {
+        fadeIn()
+    }, 8000);
+
+
+
+
+
+
+
 });

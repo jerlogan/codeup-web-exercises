@@ -1,5 +1,7 @@
 body {
     font-family: "Arial";
+    z-index: 9;
+    position: relative;
 }
 dl {
     line-height: 30px;
@@ -79,6 +81,30 @@ li {
 .container button:hover {
     color: white;
     background-color: #3B94D9;
+}
+
+.register-popup {
+    background-color: #FFFFFF;
+    width: 400px;
+    height: 170px;
+    text-align: center;
+    border: 3px solid black;
+    box-shadow: 5px 10px 50px 3px;
+    margin: 0 auto;
+    z-index: 8;
+    position: fixed;
+    left: calc(50% - 200px);
+    top: calc(50% - 200px);
+
+ }
+.register-popup h2 {
+    color: black;
+    width: 80%;
+    margin: 8px auto;
+}
+.register-popup a {
+    margin: 10px auto;
+    display: block;
 }
 
 
