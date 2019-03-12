@@ -59,7 +59,7 @@
     let yearsArray = users.map(user => user.yearsOfExperience);
     console.log(yearsArray);
 
-    let totalYears = yearsArray.reduce((total, num) => (total + num) / total);
+    let totalYears = yearsArray.reduce((total, num) => (total + num) / users.length);
     console.log(totalYears);
 
     // Use reduce to get the longest email from the list of users.
